@@ -7,14 +7,18 @@ option objc_class_prefix = "HLW";
 
 package br.com.zuporange;
 
-service PropostakotlinService {
-  rpc send (PropostakotlinRequest) returns (PropostakotlinReply) {}
+service PropostaGrpcService {
+  rpc cadastra (PropostaRequest) returns (PropostaResponse) {}
 }
 
-message PropostakotlinRequest {
-  string name = 1;
+message PropostaRequest {
+  string nome = 1;
+  string documento = 2;
+  string email = 3;
+  string endereco = 4;
+  string salario = 5;
 }
 
-message PropostakotlinReply {
-  string message = 1;
+message PropostaResponse {
+  int64 id = 1;
 }

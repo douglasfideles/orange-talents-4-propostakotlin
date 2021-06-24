@@ -39,11 +39,15 @@ dependencies {
     testImplementation("org.testcontainers:junit-jupiter")
     testImplementation("org.testcontainers:mysql")
     testImplementation("org.testcontainers:testcontainers")
-    implementation("io.micronaut:micronaut-validation")
+    //implementation("io.micronaut:micronaut-validation")
 
     runtimeOnly("com.fasterxml.jackson.module:jackson-module-kotlin")
 
     testImplementation("io.micronaut:micronaut-http-client")
+
+
+    implementation group: 'org.hibernate', name: 'hibernate-validator', version: '6.1.6.Final'
+
 
 }
 
