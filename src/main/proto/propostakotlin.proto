@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.com.zuporange";
+option java_outer_classname = "Propostakotlin";
+option objc_class_prefix = "HLW";
+
+package br.com.zuporange;
+
+service PropostakotlinService {
+  rpc send (PropostakotlinRequest) returns (PropostakotlinReply) {}
+}
+
+message PropostakotlinRequest {
+  string name = 1;
+}
+
+message PropostakotlinReply {
+  string message = 1;
+}
